@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/nav_lista_filmes">
+
+    <fragment
+            android:id="@+id/nav_editar_imagem"
+            android:name="com.example.blamovi.views.FilmesInformacoesFragment"
+            android:label="@string/menu_editar_imagem"
+            tools:layout="@layout/fragment_editar_imagem"/>
+
+    <fragment
+            android:id="@+id/nav_lista_filmes"
+            android:name="com.example.blamovi.views.ListaFilmesFragment"
+            android:label="@string/menu_lista_filmes"
+            tools:layout="@layout/fragment_lista_filmes"/>
+
+    <fragment
+            android:id="@+id/nav_filmes_informacoes"
+            android:name="com.example.blamovi.views.EditarImagemFragment"
+            android:label="@string/menu_filmes_informacoes"
+            tools:layout="@layout/fragment_filmes_informacoes"/>
+</navigation>
