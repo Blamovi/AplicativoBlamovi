@@ -9,13 +9,26 @@
             android:id="@+id/nav_editar_imagem"
             android:name="com.example.blamovi.views.FilmesInformacoesFragment"
             android:label="@string/menu_editar_imagem"
-            tools:layout="@layout/fragment_editar_imagem"/>
+            tools:layout="@layout/fragment_editar_imagem">
+        <action android:id="@+id/action_nav_editar_imagem_to_nav_lista_filmes" app:destination="@id/nav_lista_filmes"/>
+
+        <action
+            android:id="@+id/action_nav_editar_imagem_to_nav_sair"
+            app:destination="@+id/nav_sair"
+        />
+    </fragment>
 
     <fragment
             android:id="@+id/nav_lista_filmes"
             android:name="com.example.blamovi.views.ListaFilmesFragment"
             android:label="@string/menu_lista_filmes"
-            tools:layout="@layout/fragment_lista_filmes"/>
+            tools:layout="@layout/fragment_lista_filmes">
+        <action android:id="@+id/action_nav_lista_filmes_to_nav_editar_imagem" app:destination="@id/nav_editar_imagem"/>
+        <action
+                android:id="@+id/action_nav_lista_filmes_to_nav_sair"
+                app:destination="@+id/nav_sair"
+        />
+    </fragment>
 
     <fragment
             android:id="@+id/nav_filmes_informacoes"
